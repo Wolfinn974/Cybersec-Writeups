@@ -12,7 +12,7 @@
 nmap -Pn -sV nmap.txt 10.10.11.XXX
 ```
 ```markdown
-![Nmap results](../HTB/retired/cap/nmap_cap.png)
+![Nmap results](./nmap_cap.png)
 ```
 Résultat :
 21/tcp - FTP
@@ -40,7 +40,7 @@ Mot de passe FTP
 (Le tout visible dans les paquets FTP Request et FTP Response.)
 
 ```markdown
-![Wireshark](../HTB/retired/cap/cap_wireshark.png)
+![Wireshark](./cap_wireshark.png)
 ```
 
 ## Accès FTP & SSH
@@ -59,7 +59,7 @@ Flag user.txt trouvé dans le répertoire home.
 ```
 
 ```markdown
-![Userflag and linpeas import](../HTB/retired/cap/cap_user_linpeas.png)
+![Userflag and linpeas import](./cap_user_linpeas.png)
 ```
 
 ## Escalade de privilèges
@@ -88,7 +88,9 @@ Lancement de Python avec élévation des privilèges :
 ```
 
 On obtient un shell root, puis :
+```bash
 cat /root/root.txt
+```
 
 ## 🛠️ Résumé des étapes
 
