@@ -12,7 +12,8 @@
 nmap -Pn -sV nmap.txt 10.10.11.XXX
 ```
 
-![Nmap results](./nmap_cap.png)
+![Nmap results](./nmap_cap.jpg
+)
 
 Résultat :
 21/tcp - FTP
