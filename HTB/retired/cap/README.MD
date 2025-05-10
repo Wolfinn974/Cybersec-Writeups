@@ -39,9 +39,7 @@ Mot de passe FTP
 
 (Le tout visible dans les paquets FTP Request et FTP Response.)
 
-```markdown
 ![Wireshark](./cap_wireshark.png)
-```
 
 ## Accès FTP & SSH
 Connexion au serveur FTP :
@@ -54,13 +52,13 @@ Les identifiants FTP fonctionnent également pour se connecter en SSH :
 ssh user@10.10.11.XXX
 ```
 Flag user.txt trouvé dans le répertoire home.
-```markdown
-![FTP](../HTB/retired/cap/co_ftp.png)
-```
 
-```markdown
+![FTP](./co_ftp.png)
+
+
+
 ![Userflag and linpeas import](./cap_user_linpeas.png)
-```
+
 
 ## Escalade de privilèges
 Upload de linpeas.sh pour l’analyse locale :
