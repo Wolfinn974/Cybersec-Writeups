@@ -7,12 +7,12 @@ Tous les contenus sont uniquement issus de machines **retired** ou **publiques**
 
 ### Machines Retired
 - [CAP](HTB/retired/CAP/README.md)
+- [Underpass](HTB/retired/Underpass/README.md)
 
 
 ### Machines Active
 (Non publiées tant qu’elles ne sont pas retirées)
 - [Titanic](HTB/active/Titanic/README.md)
-- [Underpass](HTB/active/Underpass/README.md)
 
 ## TryHackMe
 ...
